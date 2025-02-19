@@ -9,9 +9,10 @@ public class factorial {
                 return num.multiply(fact(num.subtract(BigInteger.ONE)));
         }
     }
-    public static void main(String []args) {
+    public static long getNumber() {
         Scanner scanInput = new Scanner(System.in);
         System.out.print("Introduzca un numero: ");
+<<<<<<< HEAD
         BigInteger num = BigInteger.valueOf(scanInput.nextLong());
         if (num.compareTo(BigInteger.ZERO)<0) {
             System.out.println("El factorial no esta definido"
@@ -21,6 +22,23 @@ public class factorial {
                 System.out.println("El factorial de "+num+" es "+fac);
             }
     
+=======
+        long num = scanInput.nextLong();
+>>>>>>> refacIO
         scanInput.close();
+        return num;
     }
+    public static void showFac(long num) {
+        if (num<0) {
+                    System.out.println("El factorial no esta definido" +
+                    " para numeros negativos");
+        } else {
+                long fac = fact(num);
+                System.out.println("El factorial de "+num+" es "+fac);
+            }
+     }
+    public static void main(String []args) {
+        long num = getNumber();
+        showFac(num);
+    }  
 }
