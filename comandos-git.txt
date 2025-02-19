@@ -1,0 +1,35 @@
+comandos GIT:
+
+git clone https://github.com/Achraf0609/umafactorial.git
+git add factorial.java (añadir al repositorio el arcivo factorial.java)
+git commit -m "implementacion inicial" (crear un nuevo commit)
+git add factorial.java
+git commit -m "refactorizacion"
+git push origin main (Subir los cambios al repositorio en la nube)
+git checkout –b recursivo (para crear y cambiar de rama)
+git add factorial.java
+git commit -m "implementación recursiva"
+git checkout main (volver a la rama master)
+git add factorial.java
+git commit -m "corrección números negativos "
+git push origin main
+git checkout recursivo
+git add factorial.java
+git commit -m "optimización"
+git checkout main
+git merge recursivo (mezclar los cambios de la rama recursivo a la main)
+git checkout -b refacIO
+git add factorial.java
+git commit -m "refactorización de método de entrada"
+git stash (por si tenemos que ir a otra rama sin guardar los cambios hechos)
+git checkout main
+git add factorial.java
+git commit -m "cambio de long a BigInteger"
+git push origin main
+git stash pop (recuperar las cosas del stash)
+git add factorial.java
+git commit -m refactorización de salida
+git checkout main
+git merge refacIO
+git commit -m "mezcla de rama refacIO"
+git push origin main
